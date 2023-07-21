@@ -25,7 +25,7 @@ module cpu(
     always_comb begin
         case (data)
             1'b0: next_a = a;
-            1'b1: next_a = =a;
+            1'b1: next_a = ~a;
         endcase
         next_ip = ip + 1'b1;
     end
