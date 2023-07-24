@@ -44,7 +44,7 @@ module cpu(
 
         unique case (opecode)
             4'b0000: {next_cf, next_a} = a + imm;       // ADD A, IMM
-            4'b0101: {next_cd, next_b} = b + imm;       // ADD B, IMM
+            4'b0101: {next_cf, next_b} = b + imm;       // ADD B, IMM
             4'b0011: next_a = imm;                      // MOV A, IMM
             4'b0111: next_b = imm;                      // MOV B, IMM
             4'b0001: next_a = b;                        // MOV A, B
