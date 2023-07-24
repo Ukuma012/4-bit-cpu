@@ -50,7 +50,7 @@ module cpu(
             4'b0001: next_a = b;                        // MOV A, B
             4'b0100: next_b = a;                        // MOV B, A
             4'b1111: next_ip = imm;                     // JMP IMM
-            4'b1110: next_ip = cf ? ip + 4'd1 : imm;    // JMP IMM
+            4'b1110: next_ip = cf ? ip + 4'd1 : imm;    // JNC IMM
             4'b0010: next_a = switch                    // IN A
             4'b0110: next_b = switch                    // IN B
             4'b1001: next_out = b;                      // OUT B
