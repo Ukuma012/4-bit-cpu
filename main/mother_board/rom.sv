@@ -3,6 +3,7 @@ module rom(
     output logic[7:0] data
 );
 
+    //4bit cpuなので指定できるメモリアドレスは16番地まで
     always_comb begin
         case (addr)                         //addr      assembler
             4'b0000: data = 8'b0110_0000;   // 0        IN  B
